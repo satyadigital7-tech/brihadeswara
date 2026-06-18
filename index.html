@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brihadisvara â€“ Heritage Collection Store</title>
-  <meta name="description" content="Discover Brihadisvara Heritage Collection â€“ premium Indian architecture-inspired merchandise. T-shirts, mugs, bags, phone cases, and more.">
+  <title>Brihadisvara – Heritage Collection Store</title>
+  <meta name="description" content="Discover Brihadisvara Heritage Collection – premium Indian architecture-inspired merchandise. T-shirts, mugs, bags, phone cases, and more.">
   <meta property="og:title" content="Brihadisvara Heritage Store">
   <meta property="og:description" content="Bring timeless Indian architecture into your everyday lifestyle.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    /* â”€â”€ VARIABLES â”€â”€ */
+    /* ── VARIABLES ── */
     :root {
       --bg:       #F3F0E8;
       --bg-warm:  #EDEAE0;
@@ -44,11 +44,11 @@
     ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
-    /* â”€â”€ OVERLAY â”€â”€ */
+    /* ── OVERLAY ── */
     #overlay { position: fixed; inset: 0; background: rgba(0,0,0,.5); z-index: 900; opacity: 0; pointer-events: none; transition: opacity .3s; }
     #overlay.on { opacity: 1; pointer-events: all; }
 
-    /* â”€â”€ HEADER â”€â”€ */
+    /* ── HEADER ── */
     .site-header { position: sticky; top: 0; z-index: 800; background: rgba(243,240,232,.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); transition: box-shadow .3s; }
     .header-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 24px; }
     .logo { display: flex; flex-direction: column; flex-shrink: 0; cursor: pointer; }
@@ -67,14 +67,14 @@
     .badge { position: absolute; top: 4px; right: 4px; background: var(--accent); color: #fff; font-size: 8.5px; font-weight: 700; min-width: 16px; height: 16px; border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 0 3px; }
     .mob-menu-btn { display: none; font-size: 21px; padding: 6px; color: var(--text); }
 
-    /* â”€â”€ MOBILE NAV â”€â”€ */
+    /* ── MOBILE NAV ── */
     .mob-nav { position: fixed; top: 0; left: -100%; width: 80%; max-width: 300px; height: 100%; background: var(--white); z-index: 1300; padding: 32px 24px; transition: left .4s ease; box-shadow: 8px 0 40px rgba(0,0,0,.15); }
     .mob-nav.on { left: 0; }
     .mob-nav .logo { margin-bottom: 36px; }
     .mob-nav a { display: block; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); padding: 13px 0; border-bottom: 1px solid var(--border); }
     .mob-nav a:hover { color: var(--accent); }
 
-    /* â”€â”€ SEARCH OVERLAY â”€â”€ */
+    /* ── SEARCH OVERLAY ── */
     .search-ov { position: fixed; inset: 0; background: rgba(243,240,232,.98); z-index: 1100; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 100px; opacity: 0; pointer-events: none; transition: opacity .3s; }
     .search-ov.on { opacity: 1; pointer-events: all; }
     .search-ov-close { position: absolute; top: 24px; right: 28px; font-size: 22px; cursor: pointer; color: var(--muted); padding: 8px; }
@@ -90,11 +90,11 @@
     .sr-item .sr-name { font-size: 12px; font-weight: 500; }
     .sr-item .sr-price { font-size: 11px; color: var(--accent); }
 
-    /* â”€â”€ TOAST â”€â”€ */
+    /* ── TOAST ── */
     .toast { position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(80px); background: var(--text); color: #fff; padding: 13px 26px; border-radius: var(--r); font-size: 13px; font-weight: 500; z-index: 9999; transition: transform .35s cubic-bezier(.4,0,.2,1); white-space: nowrap; box-shadow: var(--sh-md); }
     .toast.on { transform: translateX(-50%) translateY(0); }
 
-    /* â”€â”€ HERO â”€â”€ */
+    /* ── HERO ── */
     .hero { position: relative; border-radius: 20px; overflow: hidden; height: 520px; margin: 24px 0 64px; }
     .hero-slides { width: 100%; height: 100%; position: relative; }
     .hero-slide { position: absolute; inset: 0; opacity: 0; pointer-events: none; transition: opacity 1s ease-in-out; }
@@ -120,14 +120,14 @@
     .slide-dot { width: 10px; height: 10px; background: rgba(255,255,255,0.4); border-radius: 50%; cursor: pointer; transition: background 0.3s, transform 0.3s; }
     .slide-dot.active { background: var(--accent); transform: scale(1.25); }
 
-    /* â”€â”€ SECTION HEADER â”€â”€ */
+    /* ── SECTION HEADER ── */
     .sec-hdr { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
     .sec-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 5px; }
     .sec-title { font-size: 34px; font-weight: 600; }
     .view-all { font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); display: flex; align-items: center; gap: 6px; transition: var(--tr); cursor: pointer; }
     .view-all:hover { gap: 10px; }
 
-    /* â”€â”€ FEATURED GRID â”€â”€ */
+    /* ── FEATURED GRID ── */
     .featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 72px; }
     .feat-card { position: relative; border-radius: 16px; overflow: hidden; background: var(--white); cursor: pointer; box-shadow: var(--sh-sm); transition: var(--tr); }
     .feat-card:hover { box-shadow: var(--sh-md); transform: translateY(-4px); }
@@ -142,7 +142,7 @@
     .price-was { font-size: 13px; color: var(--muted); text-decoration: line-through; }
     .price-off-badge { background: #E8F5E9; color: #2E7D32; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 2px; }
 
-    /* â”€â”€ OFFER CARD â”€â”€ */
+    /* ── OFFER CARD ── */
     .offer-card { border-radius: 16px; overflow: hidden; background: linear-gradient(145deg, #1A1209, #2D1F0A, #3D2C10); display: flex; flex-direction: column; padding: 38px 30px; position: relative; box-shadow: var(--sh-sm); cursor: pointer; transition: var(--tr); }
     .offer-card::before { content: ''; position: absolute; top: -50%; right: -30%; width: 260px; height: 260px; background: radial-gradient(circle, rgba(215,165,109,.15) 0%, transparent 70%); pointer-events: none; }
     .offer-card:hover { transform: translateY(-4px); box-shadow: var(--sh-md); }
@@ -156,7 +156,7 @@
     .coupon-box:hover { background: rgba(215,165,109,.1); }
     .offer-img { margin-top: auto; height: 160px; object-fit: contain; border-radius: 8px; }
 
-    /* â”€â”€ HERITAGE QUOTE â”€â”€ */
+    /* ── HERITAGE QUOTE ── */
     .quote-sec { text-align: center; padding: 72px 24px; margin-bottom: 72px; background: var(--white); border-radius: 20px; border: 1px solid var(--border); position: relative; overflow: hidden; }
     .quote-sec::before { content: '"'; position: absolute; top: -20px; left: 50%; transform: translateX(-50%); font-family: 'Cormorant Garamond', serif; font-size: 180px; color: rgba(215,165,109,.07); line-height: 1; pointer-events: none; }
     .ornament { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 22px; }
@@ -165,12 +165,12 @@
     .quote-text { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-style: italic; color: var(--text); line-height: 1.45; max-width: 680px; margin: 0 auto 18px; }
     .quote-author { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); font-weight: 500; }
 
-    /* â”€â”€ FILTERS â”€â”€ */
+    /* ── FILTERS ── */
     .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
     .f-btn { padding: 7px 18px; border: 1.5px solid var(--border); border-radius: 3px; font-size: 10.5px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); background: transparent; transition: var(--tr); cursor: pointer; }
     .f-btn:hover, .f-btn.on { border-color: var(--accent); color: var(--accent); background: rgba(215,165,109,.06); }
 
-    /* â”€â”€ PRODUCT GRID â”€â”€ */
+    /* ── PRODUCT GRID ── */
     .product-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; margin-bottom: 72px; }
     .pc { background: var(--white); border-radius: var(--r); overflow: hidden; box-shadow: var(--sh-sm); transition: var(--tr); position: relative; cursor: pointer; }
     .pc:hover { box-shadow: var(--sh-md); transform: translateY(-6px); }
@@ -193,7 +193,7 @@
     .pc-disc { font-size: 10.5px; font-weight: 600; color: #2E7D32; }
     .pc-stars { font-size: 11px; color: var(--accent); }
 
-    /* â”€â”€ MODAL â”€â”€ */
+    /* ── MODAL ── */
     .modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 1100; display: flex; align-items: center; justify-content: center; padding: 20px; opacity: 0; pointer-events: none; transition: opacity .3s; backdrop-filter: blur(4px); }
     .modal-bg.on { opacity: 1; pointer-events: all; }
     .modal-box { background: var(--white); border-radius: 20px; width: 100%; max-width: 880px; max-height: 90vh; overflow-y: auto; display: grid; grid-template-columns: 72px 1fr 1fr; position: relative; transform: scale(.95) translateY(20px); transition: transform .3s; }
@@ -228,7 +228,7 @@
     .btn-buy-accent:hover { background: var(--accent-d); }
     .view-full-link { text-align: center; font-size: 11.5px; color: var(--accent); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
 
-    /* â”€â”€ PRODUCT DETAIL POPUP â”€â”€ */
+    /* ── PRODUCT DETAIL POPUP ── */
     .detail-popup-bg { position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 1150; opacity: 0; pointer-events: none; transition: opacity .35s ease; backdrop-filter: blur(6px); }
     .detail-popup-bg.on { opacity: 1; pointer-events: all; }
     .detail-view { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -46%) scale(0.95); opacity: 0; pointer-events: none; width: 90%; max-width: 900px; max-height: 85vh; background: var(--bg); z-index: 1160; border-radius: 20px; overflow-y: auto; padding: 0; transition: transform .4s cubic-bezier(0.16,1,0.3,1), opacity .3s ease; box-shadow: 0 12px 60px rgba(0,0,0,.3); }
@@ -283,7 +283,7 @@
     .shr-btn { display: flex; align-items: center; gap: 6px; padding: 7px 14px; border: 1.5px solid var(--border); border-radius: 3px; font-size: 10.5px; font-weight: 600; color: var(--muted); cursor: pointer; transition: var(--tr); }
     .shr-btn:hover { border-color: var(--accent); color: var(--accent); }
 
-    /* â”€â”€ DRAWERS â”€â”€ */
+    /* ── DRAWERS ── */
     .drawer { position: fixed; top: 0; right: -480px; width: 480px; height: 100%; background: #fff; z-index: 1200; display: flex; flex-direction: column; box-shadow: -8px 0 44px rgba(0,0,0,.14); transition: right .4s cubic-bezier(.4,0,.2,1); }
     .drawer.on { right: 0; }
     .drw-head { display: flex; align-items: center; justify-content: space-between; padding: 22px 26px; border-bottom: 1px solid var(--border); }
@@ -317,7 +317,7 @@
     .btn-to-cart { padding: 6px 12px; background: var(--accent); color: #fff; border: none; border-radius: 3px; font-size: 9.5px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; margin-top: 8px; transition: var(--tr); }
     .btn-to-cart:hover { background: var(--accent-d); }
 
-    /* â”€â”€ STORY SECTION â”€â”€ */
+    /* ── STORY SECTION ── */
     .story-sec { display: grid; grid-template-columns: 1.2fr 1fr; gap: 44px; align-items: center; margin-bottom: 80px; }
     .story-img { border-radius: 16px; overflow: hidden; width: 100%; height: 420px; box-shadow: var(--sh-md); }
     .story-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
@@ -329,7 +329,7 @@
     .pillar-name { font-weight: 600; font-size: 13.5px; margin-bottom: 4px; }
     .pillar-desc { font-size: 11.5px; color: var(--muted); line-height: 1.5; }
 
-    /* â”€â”€ FAQ SECTION â”€â”€ */
+    /* ── FAQ SECTION ── */
     .faq-sec { margin-bottom: 80px; }
     .faq-grid { display: flex; flex-direction: column; gap: 14px; max-width: 800px; margin: 0 auto; }
     .faq-item { background: #fff; border: 1.5px solid var(--border); border-radius: 8px; overflow: hidden; transition: var(--tr); }
@@ -340,7 +340,7 @@
     .faq-q i { transition: transform 0.3s; font-size: 13px; color: var(--muted); }
     .faq-item.on .faq-q i { transform: rotate(180deg); color: var(--accent); }
 
-    /* â”€â”€ NEWSLETTER â”€â”€ */
+    /* ── NEWSLETTER ── */
     .nl-sec { background: var(--text); border-radius: 20px; padding: 60px; margin: 0 0 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
     .nl-sec h2 { font-size: 40px; font-weight: 600; color: #fff; margin-bottom: 10px; }
     .nl-sec p { color: rgba(255,255,255,.55); font-size: 14px; }
@@ -352,7 +352,7 @@
     .nl-btn:hover { background: var(--accent-d); }
     .nl-note { font-size: 10.5px; color: rgba(255,255,255,.33); }
 
-    /* â”€â”€ FOOTER â”€â”€ */
+    /* ── FOOTER ── */
     .site-footer { background: #0F0C07; color: rgba(255,255,255,.6); padding: 60px 0 0; }
     .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 44px; margin-bottom: 44px; }
     .foot-brand p { margin-top: 14px; font-size: 13px; line-height: 1.8; color: rgba(255,255,255,.45); }
@@ -366,7 +366,7 @@
     .foot-bottom { border-top: 1px solid rgba(255,255,255,.07); padding: 22px 0; display: flex; align-items: center; justify-content: space-between; }
     .foot-bottom p { font-size: 11.5px; color: rgba(255,255,255,.27); }
 
-    /* â”€â”€ RESPONSIVE â”€â”€ */
+    /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       .product-grid { grid-template-columns: repeat(3,1fr); }
       .foot-grid { grid-template-columns: 1fr 1fr; }
@@ -505,7 +505,7 @@
   <h2>Search</h2>
   <div class="search-row">
     <i class="fas fa-search"></i>
-    <input type="text" id="searchInput" placeholder="Search heritage productsâ€¦" autocomplete="off">
+    <input type="text" id="searchInput" placeholder="Search heritage products…" autocomplete="off">
   </div>
   <div class="search-results" id="searchRes"></div>
 </div>
@@ -521,6 +521,20 @@
         <div class="hero-slides">
           <!-- Slide 1 -->
           <div class="hero-slide active">
+            <img src="images/banner1.png" alt="Heritage Collection">
+            <div class="hero-ov">
+              <div class="hero-content">
+                <div class="hero-eye">New Collection 2026</div>
+                <h1 class="hero-title">Discover Heritage Collection</h1>
+                <p class="hero-sub">Bring timeless Indian architecture into your everyday lifestyle.</p>
+                <button class="btn-primary" onclick="document.getElementById('collections').scrollIntoView({behavior:'smooth'})">
+                  Shop Collection <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="hero-slide">
             <img src="images/banner.png" alt="Heritage Temple T-Shirt">
             <div class="hero-ov">
               <div class="hero-content">
@@ -529,20 +543,6 @@
                 <p class="hero-sub">Premium organic cotton tee featuring the magnificent vimana of Brihadisvara Temple.</p>
                 <button class="btn-primary" onclick="document.getElementById('collections').scrollIntoView({behavior:'smooth'})">
                   Shop Apparel <i class="fas fa-arrow-right"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- Slide 2 -->
-          <div class="hero-slide">
-            <img src="images/hero_lifestyle.png" alt="Heritage Collection">
-            <div class="hero-ov">
-              <div class="hero-content">
-                <div class="hero-eye">New Collection 2026</div>
-                <h1 class="hero-title">Discover Heritage Collection</h1>
-                <p class="hero-sub">Bring timeless Indian architecture into your everyday lifestyle.</p>
-                <button class="btn-primary" onclick="document.getElementById('collections').scrollIntoView({behavior:'smooth'})">
-                  Shop Collection <i class="fas fa-arrow-right"></i>
                 </button>
               </div>
             </div>
@@ -574,8 +574,8 @@
             <div class="feat-info">
               <div class="feat-name">Rajasthan Heritage Jigsaw Puzzle</div>
               <div class="feat-price">
-                <span class="price-now">â‚¹699</span>
-                <span class="price-was">â‚¹999</span>
+                <span class="price-now">₹699</span>
+                <span class="price-was">₹999</span>
                 <span class="price-off-badge">30% OFF</span>
               </div>
             </div>
@@ -590,8 +590,8 @@
             <div class="feat-info">
               <div class="feat-name">Brihadisvara Temple Coffee Mug</div>
               <div class="feat-price">
-                <span class="price-now">â‚¹349</span>
-                <span class="price-was">â‚¹499</span>
+                <span class="price-now">₹349</span>
+                <span class="price-was">₹499</span>
                 <span class="price-off-badge">30% OFF</span>
               </div>
             </div>
@@ -663,7 +663,7 @@
             <div class="pillar-card">
               <div class="pillar-icon"><i class="fas fa-shield-alt"></i></div>
               <div class="pillar-name">Secure Courier</div>
-              <div class="pillar-desc">Express doorstep shipping across India, free on orders above â‚¹499.</div>
+              <div class="pillar-desc">Express doorstep shipping across India, free on orders above ₹499.</div>
             </div>
           </div>
         </div>
@@ -687,7 +687,7 @@
           </div>
           <div class="faq-item">
             <div class="faq-q" onclick="toggleFAQ(this)">What is the standard delivery time? <i class="fas fa-chevron-down"></i></div>
-            <div class="faq-a">We offer express shipping. Orders are packed in 24 hours and delivered within 3â€“5 business days. Free shipping is automatically applied on checkout on all orders above â‚¹499.</div>
+            <div class="faq-a">We offer express shipping. Orders are packed in 24 hours and delivered within 3–5 business days. Free shipping is automatically applied on checkout on all orders above ₹499.</div>
           </div>
           <div class="faq-item">
             <div class="faq-q" onclick="toggleFAQ(this)">Can I custom order bulk corporate gifts? <i class="fas fa-chevron-down"></i></div>
@@ -740,7 +740,7 @@
             <span class="d-pwas" id="dPwas"></span>
             <span class="d-poff" id="dPoff"></span>
           </div>
-          <div class="d-note">Inclusive of all taxes. Free shipping on orders above â‚¹499.</div>
+          <div class="d-note">Inclusive of all taxes. Free shipping on orders above ₹499.</div>
         </div>
         <div id="dSzWrap" style="margin-bottom:20px">
           <div class="d-sz-hdr">
@@ -803,7 +803,7 @@
       </div>
       <div class="sel-lbl" style="margin:14px 0 9px">Quantity</div>
       <div class="qty-wrap">
-        <button class="qty-btn" onclick="mQtyChange(-1)">âˆ’</button>
+        <button class="qty-btn" onclick="mQtyChange(-1)">−</button>
         <span class="qty-num" id="mQtyNum">1</span>
         <button class="qty-btn" onclick="mQtyChange(1)">+</button>
       </div>
@@ -811,7 +811,7 @@
         <button class="btn-cart-dark" onclick="mAddCart()">Add To Cart</button>
         <button class="btn-buy-accent" onclick="mBuyNow()">Buy Now</button>
       </div>
-      <div class="view-full-link" onclick="viewFull()" style="margin-top:10px">View Full Details â†’</div>
+      <div class="view-full-link" onclick="viewFull()" style="margin-top:10px">View Full Details →</div>
     </div>
   </div>
 </div>
@@ -836,7 +836,7 @@
 </div>
 
 <script>
-// â”€â”€â”€ DATA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── DATA ───────────────────────────────────────────────────
 const PRODUCTS = [
   { id:'p1', name:'Rajasthan Heritage Jigsaw Puzzle', cat:'Stationery', price:699, was:999, disc:30, rating:4.8, rev:214,
     desc:'A beautifully detailed, premium quality jigsaw puzzle depicting the rich architectural heritage and vibrant culture of Rajasthan.',
@@ -876,7 +876,7 @@ const PRODUCTS = [
     imgs:['images/mockup_24.png'] },
 ];
 
-// â”€â”€â”€ STATE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── STATE ──────────────────────────────────────────────────
 let cart     = JSON.parse(localStorage.getItem('hrt_cart')) || [];
 let wishlist = JSON.parse(localStorage.getItem('hrt_wl'))   || [];
 let curPid   = null;
@@ -885,10 +885,10 @@ let mQty = 1, mSize = null;
 let mProd = null;
 let curFilter = 'all';
 
-// â”€â”€â”€ UTILS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── UTILS ──────────────────────────────────────────────────
 const $ = id => document.getElementById(id);
 const getP = id => PRODUCTS.find(p => p.id === id);
-const fmt  = n => 'â‚¹' + n.toLocaleString('en-IN');
+const fmt  = n => '₹' + n.toLocaleString('en-IN');
 function stars(r) {
   let h = '';
   for (let i = 0; i < Math.floor(r); i++) h += '<i class="fas fa-star"></i>';
@@ -910,7 +910,7 @@ function saveCart() { localStorage.setItem('hrt_cart', JSON.stringify(cart)); }
 function saveWL()   { localStorage.setItem('hrt_wl',   JSON.stringify(wishlist)); }
 function inWL(id)   { return wishlist.some(w => w.id === id); }
 
-// â”€â”€â”€ CART â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── CART ───────────────────────────────────────────────────
 function addToCart(id, qty = 1, size = null) {
   const ex = cart.find(i => i.id === id && i.size === size);
   if (ex) { ex.qty += qty; }
@@ -918,7 +918,7 @@ function addToCart(id, qty = 1, size = null) {
     const p = getP(id);
     cart.push({ id, name: p.name, price: p.price, img: p.imgs[0], qty, size });
   }
-  saveCart(); badges(); renderCart(); toast('Added to cart! ðŸ›');
+  saveCart(); badges(); renderCart(); toast('Added to cart! ���');
 }
 function rmCart(id, size) {
   if (size === 'null' || size === 'undefined') size = null;
@@ -950,7 +950,7 @@ function renderCart() {
         ${it.size ? `<div class="ci-size">Size: ${it.size}</div>` : ''}
         <div class="ci-price">${fmt(it.price * it.qty)}</div>
         <div class="ci-qty-row">
-          <button class="cq-btn" onclick="updCart('${it.id}','${it.size}',-1)">âˆ’</button>
+          <button class="cq-btn" onclick="updCart('${it.id}','${it.size}',-1)">−</button>
           <span style="font-size:13px;font-weight:600;min-width:22px;text-align:center">${it.qty}</span>
           <button class="cq-btn" onclick="updCart('${it.id}','${it.size}',1)">+</button>
         </div>
@@ -969,7 +969,7 @@ function renderCart() {
     </div>`;
 }
 
-// â”€â”€â”€ WISHLIST â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── WISHLIST ────────────────────────────────────────────────
 function toggleWL(id) {
   if (inWL(id)) {
     wishlist = wishlist.filter(w => w.id !== id);
@@ -978,7 +978,7 @@ function toggleWL(id) {
   } else {
     const p = getP(id);
     wishlist.push({ id, name: p.name, price: p.price, img: p.imgs[0] });
-    saveWL(); badges(); renderWL(); toast('Saved to wishlist â™¥');
+    saveWL(); badges(); renderWL(); toast('Saved to wishlist ♥');
     return true;
   }
 }
@@ -1006,7 +1006,7 @@ function rmWL(id) {
   saveWL(); badges(); renderWL(); renderGrid();
 }
 
-// â”€â”€â”€ PRODUCT GRID â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── PRODUCT GRID ────────────────────────────────────────────
 function renderGrid(filter = curFilter) {
   const grid = $('productGrid');
   const list = filter === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.cat === filter);
@@ -1037,7 +1037,7 @@ function filterP(cat, btn) {
   renderGrid(cat);
 }
 
-// â”€â”€â”€ MODAL (QUICK VIEW) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── MODAL (QUICK VIEW) ───────────────────────────────────────
 function openModal(id) {
   const p = getP(id); mProd = p; mQty = 1; mSize = p.sizes ? p.sizes[0] : null;
   $('mName').textContent = p.name;
@@ -1078,7 +1078,7 @@ function mAddCart() {
 function mBuyNow() { mAddCart(); if (mProd) { closeModal(); openCart(); } }
 function viewFull() { if (mProd) { const id = mProd.id; closeModal(); openDetail(id); } }
 
-// â”€â”€â”€ DETAIL VIEW â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── DETAIL VIEW ─────────────────────────────────────────────
 function openDetail(id) {
   const p = getP(id); curPid = id; dQty = 1; dSize = p.sizes ? p.sizes[0] : null;
   $('dName').textContent  = p.name;
@@ -1147,20 +1147,20 @@ function checkPin() {
   }
   const ok = parseInt(v) % 2 === 0;
   $('pinRes').innerHTML = ok
-    ? '<span style="color:#2E7D32"><i class="fas fa-check-circle"></i> Delivery available in 3â€“5 business days.</span>'
+    ? '<span style="color:#2E7D32"><i class="fas fa-check-circle"></i> Delivery available in 3–5 business days.</span>'
     : '<span style="color:#E53935"><i class="fas fa-times-circle"></i> Delivery not available at this pincode.</span>';
 }
 function shareP()  { if (navigator.share) navigator.share({ title: 'Brihadisvara', url: location.href }); else toast('Sharing not supported'); }
 function copyLink(){ navigator.clipboard.writeText(location.href).then(() => toast('Link copied!')).catch(()=>toast('Copy failed')); }
 
-// â”€â”€â”€ DRAWERS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── DRAWERS ─────────────────────────────────────────────────
 function openCart() { renderCart(); $('cartDrawer').classList.add('on'); $('overlay').classList.add('on'); document.body.style.overflow = 'hidden'; }
 function closeCart() { $('cartDrawer').classList.remove('on'); $('overlay').classList.remove('on'); document.body.style.overflow = ''; }
 function openWL()  { renderWL();   $('wlDrawer').classList.add('on');   $('overlay').classList.add('on'); document.body.style.overflow = 'hidden'; }
 function closeWL() { $('wlDrawer').classList.remove('on');  $('overlay').classList.remove('on'); document.body.style.overflow = ''; }
 function closeAll() { closeCart(); closeWL(); closeMobNav(); }
 
-// â”€â”€â”€ SEARCH â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── SEARCH ──────────────────────────────────────────────────
 function openSearch() {
   $('searchOv').classList.add('on'); document.body.style.overflow = 'hidden';
   setTimeout(() => $('searchInput').focus(), 80);
@@ -1177,23 +1177,23 @@ function renderSearch(q) {
 }
 $('searchInput').addEventListener('input', e => renderSearch(e.target.value));
 
-// â”€â”€â”€ MOBILE NAV â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── MOBILE NAV ───────────────────────────────────────────────
 function openMobNav()  { $('mobNav').classList.add('on');  $('overlay').classList.add('on'); document.body.style.overflow = 'hidden'; }
 function closeMobNav() { $('mobNav').classList.remove('on'); if (!$('cartDrawer').classList.contains('on') && !$('wlDrawer').classList.contains('on')) { $('overlay').classList.remove('on'); document.body.style.overflow = ''; } }
 
-// â”€â”€â”€ MISC â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── MISC ─────────────────────────────────────────────────────
 function copyCode(code) { navigator.clipboard.writeText(code).then(() => toast(`Coupon "${code}" copied!`)).catch(()=>toast('Copied: '+code)); }
 function subscribe() {
   const v = $('nlEmail').value;
   if (!v || !v.includes('@')) { toast('Enter a valid email address'); return; }
-  toast('Thank you for subscribing! ðŸŽ‰'); $('nlEmail').value = '';
+  toast('Thank you for subscribing! 🎉'); $('nlEmail').value = '';
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); closeSearch(); closeAll(); } });
 window.addEventListener('scroll', () => {
   $('siteHeader').style.boxShadow = window.scrollY > 36 ? '0 4px 24px rgba(0,0,0,.08)' : 'none';
 });
 
-// â”€â”€â”€ HERO SLIDESHOW â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── HERO SLIDESHOW ──────────────────────────────────────────
 let curSlide = 0;
 let slideInterval = null;
 
@@ -1239,7 +1239,7 @@ function toggleFAQ(el) {
   if (!wasActive) item.classList.add('on');
 }
 
-// â”€â”€â”€ INIT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── INIT ─────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   renderGrid(); renderCart(); renderWL(); badges();
   startSlideTimer();
